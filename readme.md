@@ -1,3 +1,7 @@
+## Author
+
+Parshv Meshiya  
+B.Tech CSE, IIT Roorkee
 # AutoJudge – Programming Problem Difficulty Predictor
 AutoJudge is a **full-stack Machine Learning application** that predicts:
 - **Difficulty class**: Easy / Medium / Hard  
@@ -42,43 +46,23 @@ Both **textual** and **structural** features are extracted:
 
 ---
 
-## 📂 Project Structure
 
-```text
-AutoJudge/
-│
-├── backend/
-│   └── app.py                  # FastAPI inference API
-│
-├── frontend/
-│   ├── src/
-│   │   └── App.js               # React UI
-│   └── package.json
-│
-├── models/
-│   ├── classifier_logreg.pkl    # Difficulty classifier
-│   ├── regressor_rf.pkl         # Difficulty score regressor
-│   ├── tfidf_vectorizer_v2.pkl  # TF-IDF vectorizer
-│   └── label_encoder.pkl
-│
-├── utils/
-│   └── feature_engineering.py   # Feature extraction logic
-│
-├── notebooks/
-│   ├── 03_feature_extraction.ipynb
-│   ├── 04_classification.ipynb
-│   └── 05_regression.ipynb
-│
-├── data/
-│   └── problems.csv             # Dataset
-│
-├── requirements.txt
 
-└── README.md
-```
+## Prerequisites
+
+- Python 3.8 or higher
+- Node.js & npm
+- Git
+
 ---
+## Contribution
 
+Contributions are welcome! Please open an issue or submit a pull request for improvements or bug fixes.
+
+---
 ## Setup and Installation
+
+
 
 ### (1)Clone the repository
 ```bash
@@ -119,8 +103,48 @@ npm install
 npm start
 ```
 
+
 Frontend will run at:
 
 [http://localhost:3000](http://localhost:3000)
 
 ---
+
+## Frontend Preview
+
+1. Paste a programming problem statement
+2. Click **Predict Difficulty**
+3. Instantly view:
+	- Difficulty label
+	- Numerical difficulty score
+
+---
+
+## Model Performance (Approx.)
+
+- **Classification Accuracy:** ~47%
+- **Regression MAE:** ~1.8
+- **Regression R²:** ~0.13
+
+
+---
+
+## Known Limitations
+
+- Medium class is harder to separate due to dataset imbalance
+- Regression scores may cluster around dataset mean
+
+**Future improvements:**
+- Better calibration of difficulty score
+- Transformer-based embeddings
+- Class-aware loss functions
+
+---
+
+## Tech Stack
+
+- Python 3.9+
+- FastAPI
+- scikit-learn
+- NumPy, SciPy
+- React (Create React App)
